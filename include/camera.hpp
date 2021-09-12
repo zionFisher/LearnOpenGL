@@ -80,7 +80,6 @@ public:
             Position -= Right * velocity;
         if (direction == RIGHT)
             Position += Right * velocity;
-        Position.y = 0.0f; // <-- this one-liner keeps the user at the ground level (xz plane)
     }
 
     // processes input received from a mouse input system. Expects the offset value in both the x and y direction.
