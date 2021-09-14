@@ -1,17 +1,10 @@
 {
     "configurations": [
         {
-<<<<<<< HEAD
             "name": "LearnOpenGL configuration",
             "includePath": [
                 "${workspaceFolder}/**",
                 "${workspaceFolder}/include/"
-=======
-            "name": "LearnOpenGL_Configeration",
-            "includePath": [
-                "${workspaceFolder}/include/",
-                "${workspaceFolder}/**"
->>>>>>> 0fc32e92ff125000b9542c4adb26235850464a50
             ],
             "defines": [
                 "_DEBUG",
@@ -19,11 +12,7 @@
                 "_UNICODE"
             ],
             "windowsSdkVersion": "10.0.18362.0",
-<<<<<<< HEAD
             "compilerPath": "C:/MinGW/bin/g++.exe",
-=======
-            "compilerPath": "C:/mingw64/bin/g++.exe",
->>>>>>> 0fc32e92ff125000b9542c4adb26235850464a50
             "cStandard": "c17",
             "cppStandard": "c++17",
             "intelliSenseMode": "gcc-x64"
