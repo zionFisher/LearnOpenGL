@@ -20,7 +20,10 @@ struct DirLight
 
 struct PointLight
 {
-    vec3 position;
+    vec3  position;
+    vec3  direction;
+    float cutOff;
+    float outerCutOff;
 
     float constant;
     float linear;
