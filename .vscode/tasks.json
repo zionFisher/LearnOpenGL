@@ -12,7 +12,9 @@
                 "-I${workspaceFolder}/include",
                 "-L${workspaceFolder}/lib",
                 "-lglad",
-                "-lglfw3dll"
+                "-lglfw3dll",
+                "-lzlibstatic",
+                "-l'assimp.dll'"
             ],
             "options": {
                 "cwd": "C:/MinGW/bin"

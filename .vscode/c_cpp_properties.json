@@ -4,7 +4,8 @@
             "name": "LearnOpenGL configuration",
             "includePath": [
                 "${workspaceFolder}/**",
-                "${workspaceFolder}/include/"
+                "${workspaceFolder}/include",
+                "${workspaceFolder}/lib"
             ],
             "defines": [
                 "_DEBUG",
