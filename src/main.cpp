@@ -74,7 +74,7 @@ float vertices[] =
         -0.5f,  0.5f, -0.5f,
     };
 
-glm::vec3 lightPos(1.2f, 10.0f, 2.0f);
+glm::vec3 lightPos(2.0f, 15.0f, 2.0f);
 
 int main()
 {
@@ -151,20 +151,25 @@ int main()
         // lightColor.x = sin(glfwGetTime() * 2.0f);
         // lightColor.y = sin(glfwGetTime() * 0.7f);
         // lightColor.z = sin(glfwGetTime() * 1.3f);
-		glm::vec3 diffuseColor = lightColor * glm::vec3(0.2f); // decrease the influence
-        glm::vec3 ambientColor = diffuseColor * glm::vec3(0.2f); // low influence
+		glm::vec3 diffuseColor = lightColor * glm::vec3(0.1f);
+        glm::vec3 ambientColor = diffuseColor * glm::vec3(0.2f);
+		lightPos.x = sin(glfwGetTime()) * 2.0f;
+		lightPos.z = cos(glfwGetTime()) * 2.0f;
+		modelShader.setVec3("light.position", lightPos);
 		modelShader.setVec3("light.ambient", ambientColor);
         modelShader.setVec3("light.diffuse", diffuseColor);
         modelShader.setVec3("light.specular", 1.0f, 1.0f, 1.0f);
+		modelShader.setFloat("light.constant",  1.0f);
+		modelShader.setFloat("light.linear",    0.06f);
+		modelShader.setFloat("light.quadratic", 0.02f);
 
         // material properties
         modelShader.setVec3("material.ambient", 1.0f, 1.0f, 1.0f);
         modelShader.setVec3("material.diffuse", 1.0f, 1.0f, 1.0f);
-        modelShader.setVec3("material.specular", 1.0f, 1.0f, 1.0f); // specular lighting doesn't have full effect on this object's material
+        modelShader.setVec3("material.specular", 1.0f, 1.0f, 1.0f);
         modelShader.setFloat("material.shininess", 32.0f);
 
-        modelShader.setVec3("lightColor", 1.0f, 1.0f, 1.0f);
-        modelShader.setVec3("lightPos", lightPos);
+
         modelShader.setVec3("viewPos", camera.Position);
 		Model.Draw(modelShader);
 
