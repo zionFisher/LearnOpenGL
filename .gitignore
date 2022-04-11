@@ -1,2 +1,4 @@
 src/*.exe
-.vscode/*
+.vscode
+glfw.dll
+libassimp.dll
