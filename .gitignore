@@ -1,2 +1,2 @@
-*.exe
-/homework/
+src/*.exe
+.vscode/*
