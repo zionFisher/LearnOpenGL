@@ -1,4 +1,4 @@
 src/*.exe
 .vscode
-glfw3.dll
-libassimp.dll
+/glfw3.dll
+/libassimp.dll
