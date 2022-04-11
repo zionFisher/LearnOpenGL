@@ -1,3 +1,4 @@
+#define RELEASE
 #include "utility.hpp"
 
 int main()
@@ -203,7 +204,11 @@ int main()
         // -----
         processInput(window);
 
-        // !render to framebuffer using render texture=============================================
+        /*****
+         * render to texture(pass 1) then render to screen(pass 2)
+         *****/
+
+        // !pass 1: render to framebuffer using render texture and renderbuffer object=============
         // render
         // ------
         // bind to framebuffer and draw scene as we normally would to color texture
@@ -239,7 +244,7 @@ int main()
         glBindVertexArray(0);
         // !=======================================================================================
 
-        // !render to screen=======================================================================
+        // !pass 2: render to screen===============================================================
         // now bind back to default framebuffer and draw a quad plane with the attached framebuffer color texture
         glBindFramebuffer(GL_FRAMEBUFFER, 0);
         glDisable(GL_DEPTH_TEST); // disable depth test so screen-space quad isn't discarded due to depth test.
