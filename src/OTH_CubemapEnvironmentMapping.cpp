@@ -1,4 +1,3 @@
-#define RELEASE
 #include "utility.hpp"
 
 int main()
